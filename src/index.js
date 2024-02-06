@@ -1,6 +1,9 @@
 import './styles/index.css';
-import {createCard, deleteCard, list} from "./scripts/cardManager";
-import initialCards from "./scripts/cards";
+import './scripts/cardManager';
+import './scripts/cards';
+import './scripts/imageAssets'
+import './scripts/modal'
+
 // import whoIsTheGoat from "./scripts/imageAssets";
 //
 // whoIsTheGoat.forEach(function (element) {
@@ -11,7 +14,7 @@ import initialCards from "./scripts/cards";
 //     header.appendChild(imgElement);
 // });
 
-initialCards.forEach(function (element) {
-    const card = createCard(element, deleteCard);
-    list.append(card);
-});
+// initialCards.forEach(function (element) {
+//     const card = createCard(element, deleteCard);
+//     list.append(card);
+// });
