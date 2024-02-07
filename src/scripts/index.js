@@ -1,7 +1,11 @@
 import '../styles/index.css';
 import './imageAssets'
 import initialCards from "./cards";
+<<<<<<< HEAD
 import {createCard, deleteCard, list, handleOpenImage, handleLikeClick} from "./cardManager";
+=======
+import {createCard, deleteCard, list, handleLikeClick} from "./cardManager";
+>>>>>>> d131715 (Refactoring code.)
 import {closeModal, openModal} from "./modal";
 
 const popupCard = document.querySelector('.popup_type_new-card');
@@ -17,6 +21,12 @@ const formCardElement = document.forms['new-place'];
 const nameCardInput = formCardElement.elements['place-name'];
 const linkCardInput = formCardElement.elements.link;
 const closeButtons = document.querySelectorAll('.popup__close');
+<<<<<<< HEAD
+=======
+const popupImage = document.querySelector('.popup_type_image');
+const imageElement = document.querySelector('.popup__image');
+const captionElement = document.querySelector('.popup__caption');
+>>>>>>> d131715 (Refactoring code.)
 
 initialCards.forEach(function (element) {
     const card = createCard(element, deleteCard, handleLikeClick, handleOpenImage);
@@ -50,6 +60,19 @@ function handleFormSubmit(evt) {
     handleEditProfile(nameInput.value, descriptionInput.value);
     closeModal(popupEdit);
 }
+<<<<<<< HEAD
+=======
+
+export function handleOpenImage(imageLink, imageName) {
+
+    imageElement.src = imageLink;
+    imageElement.alt = imageName;
+
+    captionElement.textContent = imageName;
+
+    openModal(popupImage);
+}
+>>>>>>> d131715 (Refactoring code.)
 formElement.addEventListener('submit', handleFormSubmit);
 popupAddCard.addEventListener('click', function () {
     openModal(popupCard);
